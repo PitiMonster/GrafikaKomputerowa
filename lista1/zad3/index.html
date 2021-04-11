@@ -8,17 +8,42 @@
   </head>
   <body style="text-align: center">
     <h1>Svg</h1>
-    <svg
-      id="mySvg"
-      width="500"
-      height="500"
-      style="
-        background-color: white;
-        display: block;
-        margin: auto;
-        border: 3px solid black;
-      "
-    ></svg>
+    <div style="display: grid; width: 80vw; grid-template-columns: 3fr 1fr">
+      <svg
+        id="mySvg"
+        width="500"
+        height="500"
+        style="
+          background-color: white;
+          display: block;
+          margin: auto;
+          border: 3px solid black;
+        "
+      ></svg>
+      <div
+        class="commands"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          text-align: start;
+        "
+      >
+      <p style="margin: .5rem 0">fd [wartość] - narysowanie linii do przodu</p>
+      <p style="margin: .5rem 0">bk [wartość] - narysowanie linii do tyłu</p>
+      <p style="margin: .5rem 0">lt [wartość] - obrót w lewo o [wartość] stopni</p>
+      <p style="margin: .5rem 0">rt [wartość] - obrót w prawo o [wartość] stopni</p>
+      <p style="margin: .5rem 0">ss [wartość] - zmiana grubości linii na [wartość] (w przedziale 1-7</1-7>)</p>
+      <p style="margin: .5rem 0">sc [wartość] - zmiana koloru na [wartość] (string - mogą być hex, zwykłe)</p>
+      <p style="margin: .5rem 0">pu - podniesienie pióra w górę</p>
+      <p style="margin: .5rem 0">pd - przyłożenie pióra do planszy</p>
+      <p style="margin: .5rem 0">cs - wyczyszczenie canvasa</p>
+      <p style="margin: .5rem 0">init - położenie pióra w pozycji startowej</p>
+      <p style="margin: .5rem 0">koch [stopień] [wartość] - narysowanie płatka Kocha stopnia [stopień] szerkości [wartość]</p>
+      <p style="margin: .5rem 0">sierp [stopień] [wartość] - narysowanie trojkata Sierpińskiego stopnia [stopien] szerokości [wartość]</p>
+    </div>
+    </div>
     <label for="cmdInput" style="font-size: 1.4rem; margin-right: 10px">Input (Enter to submit)</label>
     <input
       type="text"

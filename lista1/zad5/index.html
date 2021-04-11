@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grafika żółwia 3D</title>
+  </head>
+
+  <body>
+    <div style="text-align: center">
+    <h1>Grafika żółwia 3D</h1>
+    <div style="display: grid; width: 80vw; grid-template-columns: 3fr 1fr">
+   
+
+    <canvas
+      id="turtleCanvas"
+      width="800" 
+      height="500"
+      style="border: 3px solid black; margin: 0vh auto 4vh auto"
+    ></canvas>
+
+    
+    <div
+    class="commands"
+    style="
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: start;
+    "
+  >
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">fd [wartość] - idź do przodu o [wartość]</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">bk [wartość] - idź do tyłu o [wartość]</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">lt [wartość] - obróć w lewo o [wartość] stopni</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">rt [wartość] - obróc w prawo o [wartość] stopni</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">ut [wartość] - obróć w lewo o [wartość] stopni</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">dt [wartość] - obróc w prawo o [wartość] stopni</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">sc [color] - zmień kolor na [color] (dostepne: 'black', 'red', 'green', 'blue', 'yellow')</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">ss [wartość] - zmień grubość lini na [wartość] (w przedziale 1-6)</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">pu - podnieś pióro</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">pd - połóż pióro</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">koch [stopień] [długość] - narysuj płatek Kocha o zadanym stopniu i długości</p>
+  <p style="margin: .5rem 0; color: #333; font-size: 1.2rem;">sierp [stopień] [długość] - narysuj trójkąt Sierpińskiego o zadanym stopniu i długości</p>
+</div>
+</div>
+
+
+<p style="font-size: 2rem; margin: 0; padding: 1rem">Wiersz poleceń</p>
+<input type="text" id="commandInput" style="font-size: 1rem" size="40" />
+</div>
+    <script src="turtle_3d.js"></script>
+  </body>
+</html>

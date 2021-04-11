@@ -111,6 +111,16 @@ var sc = (value) => {
   }
 };
 
+// clear svg
+var cs = () => {
+  mySvg.innerHTML = "";
+};
+
+// init pen position
+var init = () => {
+  initTurtle();
+};
+
 // change thickness of track
 var ss = (value) => {
   if (value >= 1 && value <= 7) trackWidth = value;
@@ -124,7 +134,7 @@ var pd = () => (isPenUp = false);
 
 var koch = async (level, length) => {
   if (level < 1) {
-    await new Promise((r) => setTimeout(r, 100));
+    // await new Promise((r) => setTimeout(r, 100));
     fd(length);
   } else {
     await koch(level - 1, length / 3.0);
@@ -257,6 +267,12 @@ var runCmd = async (cmd) => {
       break;
     case "ss":
       ss(cmd[1]);
+    case "cs":
+      cs();
+      break;
+    case "init":
+      init();
+      break;
     default:
       break;
   }

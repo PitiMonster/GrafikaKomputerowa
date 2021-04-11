@@ -8,19 +8,48 @@
   </head>
   <body style="text-align: center">
     <h1>Grafika zółwia</h1>
-    <canvas
-      id="myCanvas"
-      width="800"
-      height="500"
-      style="
-        border: 2px solid black;
-        margin: 10vh auto 5vh auto;
-        display: block;
-      "
-    ></canvas>
-    <p style="font-size: 2.5rem; margin-bottom: 10px;">Commands</p>
-    <input type="text" id="cmdInput" style="font-size: 1rem; padding: .5rem;" size="40">
+    <div style="display: grid; width: 80vw; grid-template-columns: 3fr 1fr">
+      <canvas
+        id="myCanvas"
+        width="800"
+        height="500"
+        style="
+          border: 2px solid black;
+          margin: 10vh auto 5vh auto;
+          display: block;
+        "
+      ></canvas>
+      <div
+        class="commands"
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          text-align: start;
+        "
+      >
+      <p style="margin: .5rem 0">fd [wartość] - ruch do przodu</p>
+      <p style="margin: .5rem 0">bk [wartość] - ruch do tyłu</p>
+      <p style="margin: .5rem 0">lt [wartość] - obrót w lewo o [wartość] stopni</p>
+      <p style="margin: .5rem 0">rt [wartość] - obrót w prawo o [wartość] stopni</p>
+      <p style="margin: .5rem 0">ss [wartość] - zmiana grubości lini na [wartość] (w przedziale 1-7</1-7>)</p>
+      <p style="margin: .5rem 0">sc [wartość] - zmiana koloru na [wartość] (string - mogą być hex, zwykłe)</p>
+      <p style="margin: .5rem 0">pu - pdniesienie pióra w górę</p>
+      <p style="margin: .5rem 0">pd - przyłożenie pióra do planszy</p>
+      <p style="margin: .5rem 0">cs - wyczszczenie canvasa</p>
+      <p style="margin: .5rem 0">init - położenie żółwia w pozycji startowej</p>
+      <p style="margin: .5rem 0">koch [stopień] [wartość] - narysowanie płatka Kocha stopnia [stopień] szerkości [wartość]</p>
+      <p style="margin: .5rem 0">sierp [stopień] [wartość] - narysowanie trojkata Sierpińskiego stopnia [stopien] szerokości [wartość]</p>
+    </div>
+    </div>
+    <p style="font-size: 2.5rem; margin-bottom: 10px">Commands (Enter - submit)</p>
+    <input
+      type="text"
+      id="cmdInput"
+      style="font-size: 1rem; padding: 0.5rem"
+      size="40"
+    />
     <script src="./turtle.js"></script>
-
   </body>
 </html>

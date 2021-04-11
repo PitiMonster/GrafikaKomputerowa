@@ -100,6 +100,16 @@ var sc = (value) => {
   }
 };
 
+// clear canvas
+var cs = () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+// put tutrtle in initial position
+var init = () => {
+  initTurtle();
+}
+
 // change thickness of track
 var ss = (value) => {
   if (value >= 1 && value <= 7) ctx.lineWidth = value;
@@ -246,6 +256,12 @@ var runCmd = async (cmd) => {
       break;
     case "ss":
       ss(cmd[1]);
+    case "cs":
+      cs();
+      break;
+    case "init":
+      init();
+      break;
     default:
       break;
   }
